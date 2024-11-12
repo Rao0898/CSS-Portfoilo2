@@ -1,0 +1,56 @@
+/* ProjectsSection.module.css */
+
+.projects {
+  padding: 2rem;
+}
+
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.projectItem {
+  position: relative;
+  height: 300px; /* Adjust this value as needed */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Default color, will be overridden by child styling */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align content to the bottom */
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px; /* Optional: Add padding if needed */
+}
+
+.projectItem h3,
+.projectItem p {
+  color: black; /* Set the text color to black */
+  margin: 0; /* Remove default margin */
+}
+
+.projectItem h3 {
+  font-size: 1.5rem; /* Adjust font size */
+  margin-bottom: 8px; /* Space between title and description */
+}
+
+.projectItem p {
+  font-size: 1rem; /* Adjust font size */
+}
+
+.projectItem::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Optional: Adds a dark overlay */
+  z-index: 1;
+}
+
+.projectItem > * {
+  position: relative; /* Ensure the text is on top of the overlay */
+}
